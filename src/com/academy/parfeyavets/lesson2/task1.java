@@ -2,7 +2,7 @@ package com.academy.parfeyavets.lesson2;
 
 import java.util.Scanner;
 
-public class task1 {
+public class task1 { //конвеншн именования классов! классы именуются с большой буквы. исправить все классы!
     public static void main(String[] args) {
         System.out.println("Введите 1-ое число");
         Scanner scanner = new Scanner(System.in);

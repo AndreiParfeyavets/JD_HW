@@ -17,7 +17,7 @@ public class task6 {
         else {
             double d = b * b - 4 * a * c;
             if (d == 0) {
-                double x = -b * 2 * a;
+                double x = -b * 2 * a; //выдает неверный результат
                 System.out.println("Уравнение имеет 1 квадратный корень" + x);
             } else if (d > 0) {
                 double x = (-b + Math.sqrt(d)) / (2 * a);

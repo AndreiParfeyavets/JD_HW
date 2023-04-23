@@ -2,7 +2,7 @@ package com.academy.parfeyavets.lesson3;
 
 import java.util.Scanner;
 
-public class task5 {
+public class task5 { // не выполнено совсем. не работает само и не дает скомпилироваться всему проекту) пересмотри
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String stringScan = scanner.nextLine();
