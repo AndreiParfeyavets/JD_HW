@@ -1,6 +1,6 @@
 package com.academy.parfeyavets.lesson3;
 
-public class task7 {
+public class task7 { //нужен отдельный метод для поиска индекса строки
     public static void main(String[] args) {
         int[][] matrix = {
                 {17, 7, 9},
