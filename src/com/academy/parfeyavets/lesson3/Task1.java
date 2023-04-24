@@ -1,6 +1,6 @@
 package com.academy.parfeyavets.lesson3;
 
-public class task1 {
+public class Task1 {
     public static void main(String[] args) {
         //int x = 5, i = 0;
         //while (i < 10) {

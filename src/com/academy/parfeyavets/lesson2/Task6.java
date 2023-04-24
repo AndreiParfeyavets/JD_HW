@@ -2,7 +2,7 @@ package com.academy.parfeyavets.lesson2;
 
 import java.util.Scanner;
 
-public class task6 {
+public class Task6 {
     public static void main(String[] args) {
         System.out.print("Введите переменную a ");
         Scanner scanner = new Scanner(System.in);
@@ -17,8 +17,8 @@ public class task6 {
         else {
             double d = b * b - 4 * a * c;
             if (d == 0) {
-                double x = -b * 2 * a;
-                System.out.println("Уравнение имеет 1 квадратный корень" + x);
+                double x = -b / (2 * a);
+                System.out.println("Уравнение имеет 1 квадратный корень: " + x);
             } else if (d > 0) {
                 double x = (-b + Math.sqrt(d)) / (2 * a);
                 double y = (-b - Math.sqrt(d)) / (2 * a);

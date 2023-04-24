@@ -1,12 +1,17 @@
 package com.academy.parfeyavets.lesson3;
 
-public class task7 {
+public class Task7 {
     public static void main(String[] args) {
         int[][] matrix = {
-                {17, 7, 9},
                 {3, 11, 5},
+                {17, 7, 9},
                 {8, 6, 7}
         };
+        int i = getMaxSumLineIndex(matrix);
+        System.out.print("Индекс строки = " + i);
+    }
+
+    public static int getMaxSumLineIndex(int[][] matrix) {
         int max = 0;
         int index = 0;
         for (int i = 0; i < matrix[0].length; i++) {
@@ -19,6 +24,6 @@ public class task7 {
                 index = i;
             }
         }
-        System.out.print("Индекс строки = " + index);
+        return index;
     }
 }
