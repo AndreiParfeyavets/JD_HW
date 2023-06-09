@@ -7,7 +7,7 @@ public class Task2 {
         System.out.println("Первый элемент: " + pair.first());
         System.out.println("Последпний элемент: " + pair.last());
 
-        Pair swapPair = pair.swap();
+        Pair swapPair = pair.swap(); //тоже сырой тип. Укажи параметризацию
         System.out.println("Перемена мест: " + swapPair.first() + ", " + swapPair.last());
 
         pair.replaceFirst("World");
