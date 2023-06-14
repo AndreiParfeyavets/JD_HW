@@ -3,8 +3,8 @@ package com.academy.parfeyavets.lesson5;
 public class Fraction {
     private int numinator;
     private int denominator;
-    static int currNuminator = 1;
-    static int currDenominator = 3;
+    static int currNuminator = 1; // не должно быть таких полей у этого объекта
+    static int currDenominator = 3; // не должно быть таких полей у этого объекта
 
     public Fraction(int numinator, int denominator) {
         if (denominator == 0){
@@ -20,35 +20,35 @@ public class Fraction {
         System.out.println(strNum +"/"+strDen);
     }
 
-    public static Fraction Addition (Fraction fraction1) {
+    public static Fraction Addition (Fraction fraction1) { //конвеншн именования методов! методы не должны быть статическими и должны вызываться на объекте
         Fraction summa  = new Fraction(currNuminator * fraction1.denominator + currDenominator * fraction1.numinator, currDenominator * fraction1.denominator);
 //        System.out.println(summa.numinator + "/" + summa.denominator);
         return summa;
     }
 
-    public static Fraction Multipl (int a) {
+    public static Fraction Multipl (int a) { //конвеншн именования методов! методы не должны быть статическими и должны вызываться на объекте
         Fraction multipl  = new Fraction(currNuminator * a , currDenominator);
 //        System.out.println(multipl.numinator + "/" + multipl.denominator);
         return multipl;
     }
 
-    public static Fraction Division (int a) {
+    public static Fraction Division (int a) { //конвеншн именования методов! методы не должны быть статическими и должны вызываться на объекте
         Fraction division  = new Fraction(currNuminator  , currDenominator* a);
 //        System.out.println(division.numinator + "/" + division.denominator);
         return division;
     }
-    public static void AdditionFraction (Fraction fraction1, Fraction fraction2) {
+    public static void AdditionFraction (Fraction fraction1, Fraction fraction2) { //конвеншн именования методов! методы не должны быть статическими и должны вызываться на объекте
         Fraction summaFraction  = new Fraction (fraction1.numinator*fraction2.denominator+fraction2.numinator*fraction1.denominator, fraction1.denominator*fraction2.denominator);
         System.out.println("Сумма двух дробей равна = " + summaFraction.numinator + "/" + summaFraction.denominator);
     }
 
-    public static void MulDivFraction (Fraction fraction1, int a) {
+    public static void MulDivFraction (Fraction fraction1, int a) { //конвеншн именования методов! методы не должны быть статическими и должны вызываться на объекте
         Fraction multiplFraction = new Fraction (fraction1.numinator*a, fraction1.denominator);
         Fraction divisionFraction = new Fraction (fraction1.numinator, fraction1.denominator*a);
         System.out.println("Умножение дроби на число равно = " + multiplFraction.numinator + "/" + multiplFraction.denominator);
         System.out.println("Деление дроби на число равно = " + divisionFraction.numinator + "/" + divisionFraction.denominator);
         return;
-
+        //разве такое есть в задании?
     }
 
     public int getNuminator() {

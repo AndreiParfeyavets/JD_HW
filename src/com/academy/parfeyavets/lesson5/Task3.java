@@ -27,7 +27,7 @@ public class Task3 {
         array[8] = darya;
         array[9] = anna;
 
-        ListStudent.CourseStudent(array, 5);
+        ListStudent.CourseStudent(array, 5); // не строго принципиально, но лучше сделать методы не статическими и создать объект ListStudent
         ListStudent.BirthStudent(array, 1990);
     }
 

@@ -1,7 +1,7 @@
 package com.academy.parfeyavets.lesson5;
 
 public class Student {
-    private int id;
+    private int id; //геттеры и сеттеры нужны для всех полей, даже если они не используются
     private String fullName;
     private String faculty;
     private int course;
