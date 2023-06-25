@@ -30,10 +30,26 @@ public class Task {
         list.addAll(newList);
         System.out.println(list);
         list.addAll(myList);//Почему не добавляет myList???????? Это же стандартный метод ArrayList, а не мой.
+        //потому что стандартный метод на ТВОЕЙ коллекции вызывает  Object[] a = c.toArray();
+        //а он у тебя не переопределен
         System.out.println("List + myList"+list);
 
         myList.addAll(newList);//в своем методе я окончательно заптулся. пробовал много разного.
+/*
+ @Override
+    public boolean addAll(Collection<? extends T> c) {
+        T[] array = (T[]) c.toArray();
+        int positionIndex = elements.length;
+        if (size == elements.length) {
+            elements = Arrays.copyOf(elements, elements.length + c.size());
+        }
+        size += c.size();
+        System.arraycopy(array, 0, elements, positionIndex , array.length);
+        return true;
+        }
 
+        как один из вариантов. разберись только как работает
+ */
 
         myList.clear();
         System.out.println(myList);
