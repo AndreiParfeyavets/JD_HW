@@ -42,13 +42,27 @@ public class MyList<T> implements List<T> {
 
     @Override
     public Object[] toArray() {
-        return new Object[0];
+        Object[] toReturn = new Object[size];
+        for (int i = 0; i < size; i++) {
+            toReturn[i] = elements[i];
+        }
+        return toReturn;
     }
 
     @Override
     public <T1> T1[] toArray(T1[] a) {
         return null;
     }
+//    @Override
+//    public <T> T[] toArray(T[] t) {
+//        if (t.length < size)
+//            // Make a new array of a's runtime type, but my contents:
+//            return (T[]) Arrays.copyOf(elements, size, t.getClass());
+//        System.arraycopy(elements, 0, t, 0, size);
+//        if (t.length > size)
+//            t[size] = null;
+//        return t;
+//    }
 
     @Override
     public boolean add(T t) {
@@ -72,15 +86,23 @@ public class MyList<T> implements List<T> {
 
     @Override
     public boolean addAll(Collection<? extends T> c) {
-//        if (size == elements.length) {
-//            elements = Arrays.copyOf(elements, elements.length * 3 / 2 + 1);
+        if (c.size() == 0){
+            return false;
+        }
+        T[] addElements = (T[]) c.toArray();
+        int capacity = elements.length;
+        int newCapacity = size+addElements.length;
+        if (capacity < newCapacity) {
+            elements = Arrays.copyOf(elements, size+addElements.length);
+        }
+        for (int i = 0; i < addElements.length; i++) {
+            elements[i+size]=addElements[i];
+        }
+//        if (addElements.length > size-elements.length){
+//            elements = Arrays.copyOf(elements, elements.length+addElements.length);
 //        }
-        Object[] a = c.toArray();
-//        if (a.length>(size - elements.length)){
-//            elements = Arrays.copyOf(elements, elements.length * 3 / 2 + 1);
-//        }
-        size = elements.length + a.length;
-        System.arraycopy(a, 0, elements, elements.length + 1, a.length);
+//        System.arraycopy(addElements, 0, elements,capacity, addElements.length);
+        size = size+addElements.length;
         return true;
     }
 

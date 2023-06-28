@@ -23,20 +23,19 @@ public class Task {
         System.out.println(myList.get(1));
         System.out.println(myList);
 
-        ArrayList<String> list = new ArrayList<>(10);
-        list.add("ddd");
-        ArrayList<String> newList = new ArrayList<>(10);
-        newList.add("2dfs");
-        list.addAll(newList);
-        System.out.println(list);
-        list.addAll(myList);//Почему не добавляет myList???????? Это же стандартный метод ArrayList, а не мой.
-        System.out.println("List + myList"+list);
+        MyList<String> newMyList = new MyList<>();
+        newMyList.add("000");
+        newMyList.add("3444");
+        newMyList.add("5555");
+        newMyList.add("5555");
+        newMyList.add("5555");
 
-        myList.addAll(newList);//в своем методе я окончательно заптулся. пробовал много разного.
+        System.out.println("newMyList: " + newMyList);
 
-
+        myList.addAll(newMyList);
+        System.out.println("myList + newMyList: " + myList);
         myList.clear();
-        System.out.println(myList);
+        System.out.println("myList: " + myList + " - clear");
 
 
     }
