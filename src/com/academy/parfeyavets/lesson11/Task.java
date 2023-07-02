@@ -37,6 +37,5 @@ public class Task {
         myList.clear();
         System.out.println("myList: " + myList + " - clear");
 
-
     }
 }

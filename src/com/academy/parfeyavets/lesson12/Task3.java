@@ -25,6 +25,6 @@ public class Task3 {
                 }
             }
         }
-        return deque.isEmpty();
+        return deque.isEmpty();//
     }
 }

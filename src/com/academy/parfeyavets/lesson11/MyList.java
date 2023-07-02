@@ -53,16 +53,7 @@ public class MyList<T> implements List<T> {
     public <T1> T1[] toArray(T1[] a) {
         return null;
     }
-//    @Override
-//    public <T> T[] toArray(T[] t) {
-//        if (t.length < size)
-//            // Make a new array of a's runtime type, but my contents:
-//            return (T[]) Arrays.copyOf(elements, size, t.getClass());
-//        System.arraycopy(elements, 0, t, 0, size);
-//        if (t.length > size)
-//            t[size] = null;
-//        return t;
-//    }
+
 
     @Override
     public boolean add(T t) {

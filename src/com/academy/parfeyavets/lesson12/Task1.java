@@ -9,7 +9,7 @@ public class Task1 {
         Set<Integer> cross = getCross(setA, setB);
         System.out.println(cross);
         Set<Integer> union = getUnion(setA, setB);
-        System.out.println(union);
+        System.out.println(union);///
 
 
     }

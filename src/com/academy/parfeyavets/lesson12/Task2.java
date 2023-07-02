@@ -19,7 +19,7 @@ public class Task2 {
         }
         keyList.trimToSize();
         System.out.println("List из консоли: " + keyList);
-
+//
 
     }
 }
